@@ -56,10 +56,18 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+
+   > Yes, I believe there should be an entity that in your database that does represent your transient state. Database diagrams are a visual representation of how your data communicates/relates with one another. For example in this project, the transient state was represented by purchases.
+
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+
+   > The await key word pauses on that line of code until your function returns what it promised. If you remove it, before your function returns what it promised the code underneath already begins running without the data expected returned from your function.
+
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+
+   > I have a event listener. When it hears a click on the screen, It will run my function to handle what happens what I click. 1.
+   it checks to see if what we click on is what we are expecting 2. If it is then it will run an imported function that expects an Id and it will set the corresponding property of the transient state object to the Id of what we click on. The Purchase button turns the temporary data and posts it to store as permanent data.
+
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+
+   > I used both, and for me, it does the same thing except its less code and makes it more readable.
